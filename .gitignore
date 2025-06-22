@@ -1,0 +1,16 @@
+# Virtual Environment
+venv/
+__pycache__/
+
+# Data files
+*.xlsx
+*.csv
+
+# Output folders
+output/
+invoices/
+extra invoices/
+
+# IDE files
+.specstory/
+.cursorindexingignore 
