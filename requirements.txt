@@ -1,0 +1,11 @@
+pypdf
+pandas
+pathlib
+pdfplumber
+ollama
+litellm
+Jinja2
+openpyxl
+fastapi
+uvicorn[standard]
+python-multipart 
