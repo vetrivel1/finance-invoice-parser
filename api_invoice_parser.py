@@ -78,9 +78,10 @@ async def format_invoice_to_csv(file: UploadFile = File(...)):
     try:
         # 1. Read configuration files for the LLM
         try:
-            with open('format.md', 'r', encoding='utf-8') as f:
+            base_dir = os.path.dirname(os.path.abspath(__file__))
+            with open(os.path.join(base_dir, 'format.md'), 'r', encoding='utf-8') as f:
                 system_prompt = f.read()
-            with open('mapping.md', 'r', encoding='utf-8') as f:
+            with open(os.path.join(base_dir, 'mapping.md'), 'r', encoding='utf-8') as f:
                 mapping_data = f.read()
         except FileNotFoundError as e:
             raise HTTPException(status_code=500, detail=f"A required configuration file is missing: {e}")
